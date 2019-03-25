@@ -1,0 +1,22 @@
+.container{
+    background-color: #eee;
+}
+
+.section-login,.link-register{
+    max-width: 40%;
+    padding: 2%;
+    margin: auto;
+}
+
+.section-login input[type="email"]{
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.form-control{
+    position: relative;
+    margin: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
