@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Perfil</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="scripts/config.js"> </script>
+</head>
+<body>
+    <header>
+        <h1>Bem vindo xuxu! O.o</h1>
+    </header>
+
+    <section class= "screen-posts">
+        <form class= "twitter">    
+            <textarea id= "comment"></textarea> 
+            <legend id= "contador">140</legend>
+            <input type= "button" value="Publicar" id= "btn-fork">
+        </form>
+    </section>
+
+    <button id= "exit" class= "btn btn-light btn-block">Sair</button>
+    
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script src="scripts/perfil.js"></script>
+</body>
+</html>
