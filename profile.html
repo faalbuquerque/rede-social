@@ -7,11 +7,18 @@
   <title>Fork Rank</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/profile.css">
-  </head>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+  <script src="scripts/config.js"> </script>
+</head>
+
 <body>
   <h1>Fork Rank</h1>
   <section>
-    <textarea name="post" id="post-text" cols="30" rows="10" placeholder="Como está sua fome hoje?"></textarea>
+    <form>
+      <textarea id="post-text" placeholder="Como está sua fome hoje?"></textarea>
+    </form>
     <div>
       <select name="posttype" id="privacy-menu">
         <option>Amigos</option>
@@ -22,7 +29,9 @@
   </section>
   <ul id="post-feed">
   </ul>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="scripts/proflle.js"></script>
 </body>
+
 </html>

@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function () {
-            window.location = 'perfil.html';
+            window.location = 'profile.html';
         })
         .catch(function (error) {
             let errorCode = error.code;
@@ -26,7 +26,7 @@ $(document).ready(function () {
     
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function (response) {
-                window.location = 'perfil.html';
+                window.location = 'profile.html';
               
             })
             .catch(function (error) {
