@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function () {
-            window.location = 'perfil.html';
+            window.location = 'profile.html';
         })
         .catch(function (error) {
             let errorCode = error.code;
@@ -26,7 +26,7 @@ $(document).ready(function () {
     
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function (response) {
-                window.location = 'perfil.html';
+                window.location = 'profile.html';
               
             })
             .catch(function (error) {
@@ -36,7 +36,6 @@ $(document).ready(function () {
             });
     })
 
-    /*
     $("#login-gmail").click(function (event) {
         event.preventDefault();
         let provider = new firebase.auth.GoogleAuthProvider();
@@ -44,7 +43,7 @@ $(document).ready(function () {
             .then(function (result) {
                 let token = result.credential.acessToken;
                 let user = result.user;
-                window.location = 'perfil.html';
+                window.location = 'profile.html';
             })
             .catch(function (error) {
                 let errorCode = error.code;
@@ -54,7 +53,26 @@ $(document).ready(function () {
                 alert('Erro de autenticação')
             })
     })
-    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
 
 

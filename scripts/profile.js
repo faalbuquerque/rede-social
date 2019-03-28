@@ -1,16 +1,6 @@
 
 $(document).ready(function() {
 
-    $("#exit").click(function (event) {
-        event.preventDefault();
-
-        firebase.auth().signOut().then(function() {
-            window.location = 'index.html';
-        }).catch(function(error) {
-            alert("Erro: " + error);
-        });
-    });
-
     $("#post-button").click(function(){
         let postText = $("#post-text").val();
         $("#post-feed").prepend(
@@ -19,7 +9,18 @@ $(document).ready(function() {
            <button>Editar</button>
           `);
       });
+
       
 
+    $("#exit").click(function (event) {
+        event.preventDefault();
+    
+        firebase.auth().signOut().then(function() {
+            window.location = 'index.html';
+        }).catch(function(error) {
+            alert("Erro: " + error);
+        });
+    });
+    
 });
 
