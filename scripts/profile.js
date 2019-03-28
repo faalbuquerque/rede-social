@@ -11,7 +11,6 @@ $(document).ready(function() {
       });
 
       
-
     $("#exit").click(function (event) {
         event.preventDefault();
     

@@ -1,26 +1,7 @@
 $(document).ready(function () {
 
-    $("#btn-register").click(function (event) {
-    event.preventDefault();
-
-    let email = $("#input-email").val();
-    let password = $("#input-password").val();
-
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function () {
-            window.location = 'profile.html';
-        })
-        .catch(function (error) {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            alert("erro: " + errorMessage);
-        });
-    })
-
-
     $("#btn-login").click(function (event) {
         event.preventDefault();
-
         let email = $("#email").val();
         let password = $("#password").val();
     
@@ -53,25 +34,6 @@ $(document).ready(function () {
                 alert('Erro de autenticação')
             })
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
 
