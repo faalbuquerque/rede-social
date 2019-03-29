@@ -1,6 +1,7 @@
 let database = firebase.database();
 
 $(document).ready(function() {
+
   database.ref('posts').once('value').then(function (snapshot) {
     snapshot.forEach(function (childSnapshot) {
       var childKey = childSnapshot.key;
@@ -32,11 +33,15 @@ $(document).ready(function() {
     
     createPost(postText, newPostInDB.key); 
 
+    $("#post-button").prop("disabled", true);
+
   });
 
-  $("#post-button").mouseover(function (event) {
-    let postLength = $("#post-text").val().length;
-    if (postLength !== 0) {
+  $("#post-button").prop("disabled", true);
+
+  $("#post-text").keyup(function (event) {
+    
+    if ($(this).val().length != 0) {
       $("#post-button").prop("disabled", false);
     }
     else {
@@ -62,10 +67,10 @@ $(document).ready(function() {
       });
 
       
-      $(`button[data-edit-id=${key}]`).click(function(){
+    //   $(`button[data-edit-id=${key}]`).click(function(){
        
      
-     });
+    //  });
 
 }
 
