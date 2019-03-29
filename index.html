@@ -11,6 +11,9 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
     <script src="scripts/config.js"> </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 </head>
 <body>
     <section class= "screen-login">
@@ -23,8 +26,10 @@
             <button id= "btn-login" class= "btn btn-outline-primary btn-lg btn-block">Entrar</button>   
         </form>
         <button id= "login-gmail" class= "btn btn-outline-primary">Google</button> 
+        <button id= "login-facebook" class= "btn-facebook" onclick="loginFacebook()">Facebook</button>
         <button id="new-user">Para se cadastrar clique aqui</button>
     </section>
+    
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
@@ -33,5 +38,6 @@
     <script src="scripts/script.js"></script>
     <script src="scripts/profile.js"></script> 
     <script src="scripts/register.js"></script> 
+    <script src="scripts/facebook.js"></script> 
 </body>
 </html>
