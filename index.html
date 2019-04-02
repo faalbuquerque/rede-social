@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Fork Rank</title>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
     <script src="scripts/config.js"> </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <section class= "screen-login">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 m-5 ">
+                <img src="assets/images/logo branco.png" alt="logo" class="w-100 align-items-center">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 m-3">
+                <form>
+                    <input type="email" id="email" placeholder="Digite seu email" class="form-control form-login mb-4"
+                        autofocus>
+                    <input type="password" id="password" placeholder="Digite sua senha" class="form-control form-login"
+                        required>
+                    <button type="button" class="btn btn-danger btn-block mt-3">Entrar</button>
+                </form>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 mb-5">
+                <button id="login-gmail" class="facemail-btn">
+                    <img src="assets/images/gmail-logo.png" alt="gmail-logo" width="40px" height="30px"
+                        class="login-img"></button>
+                <button id="login-facebook" class="facemail-btn" onclick="loginFacebook()">
+                    <img src="assets/images/face-logo.png" alt="face-logo" width="40px" height="40px"
+                        class="login-img"></button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 mb-5">
+                <button id="new-user" class="subscribe-btn">Para se cadastrar clique aqui</button>
+            </div>
+        </div>
 
-        <h3>Tela de login</h3>
-        <form>
-            <label>Logar com e-mail</label>
-            <input type= "email" id= "email" placeholder= "Digite seu email"  class = "form-control" autofocus>
-            <input type= "password" id= "password" placeholder= "Digite sua senha"  class= "form-control" required>
-            <button id= "btn-login" class= "btn btn-outline-primary btn-lg btn-block">Entrar</button>   
-        </form>
-        <button id= "login-gmail" class= "btn btn-outline-primary">Google</button> 
-        <button id= "login-facebook" class= "btn-facebook">Facebook</button>
-        <button id="new-user">Para se cadastrar clique aqui</button>
-    </section>
-    
-
+    </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
-    </script>
-    
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/profile.js"></script> 
-    <script src="scripts/register.js"></script> 
-    <script src="scripts/facebook.js"></script> 
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/register.js"></script>
+    <script src="scripts/facebook.js"></script>
 </body>
+
 </html>
