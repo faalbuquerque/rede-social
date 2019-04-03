@@ -18,16 +18,31 @@
 </head>
 
 <body>
-    <section class="screen-register">
-        <form>
-            <label>Cadastro de novo usuário</label>
-            <input type= "text" id= "input-name" placeholder= "Digite seu nome"  class = "form-control" autofocus>
-            <input type= "email" id= "input-email" placeholder= "Digite seu email"  class = "form-control">
-            <input type= "password" id= "input-password" placeholder= "Digite uma senha acima de 6 digitos" class= "form-control" required>
-            <button id= "btn-register" class= "btn btn-outline-primary btn-lg btn-block">Cadastrar</button>   
-        </form>
-        <button id="exit" class="btn btn-light btn-block">Sair</button>
-    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <button><i class="fas fa-arrow-circle-left"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form>
+                    <label>Cadastro de novo usuário</label>
+                    <input type="text" id="input-name" placeholder="Digite seu nome" class="form-control" autofocus>
+                    <input type="email" id="input-email" placeholder="Digite seu email" class="form-control">
+                    <input type="password" id="input-password" placeholder="Digite uma senha acima de 6 digitos"
+                        class="form-control" required>
+                    <button id="btn-register" class="btn btn-outline-primary btn-lg btn-block">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button id="exit" class="btn btn-light btn-block">Sair</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

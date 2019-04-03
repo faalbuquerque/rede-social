@@ -1,8 +1,7 @@
-.container-fluid{
-    background-image: url(/assets/images/lum3n-416605-unsplash.jpg);
-    background-repeat: no-repeat;
+.container{
+    height: 100vh;
+    background-image: url(/assets/images/background-login.jpg);
     background-size: cover;
-    height: auto;
 }
 
 .form-login{
