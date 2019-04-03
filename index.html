@@ -51,12 +51,44 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-xs-12 mb-5">
-                <button id="new-user" class="subscribe-btn">Para se cadastrar clique aqui</button>
+                <button type="new-user" class="subscribe-btn" data-toggle="modal" data-target="#exampleModal">
+                    Não tem cadastro? Clique aqui!
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cadastro de novo usuário:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-center">
+                            <div class="col-xs-12">
+                                <form>
+                                    <input type="text" id="input-name" placeholder="Digite seu nome"
+                                        class="form-control mb-2" autofocus>
+                                    <input type="email" id="input-email" placeholder="Digite seu email"
+                                        class="form-control mb-2">
+                                    <input type="password" id="input-password"
+                                        placeholder="Senha (mínimo 6 caracteres)" class="form-control mb-2" required>
+                                    <button id="btn-register"
+                                        class="btn btn-dark btn-lg btn-block mb-2">Cadastrar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
         </script>
 
@@ -66,10 +98,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/profile.js"></script>
-    <script src="scripts/register.js"></script>
-    <script src="scripts/facebook.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/profile.js"></script>
+    <script type="text/javascript" src="scripts/register.js"></script>
+    
+
 </body>
 
 </html>
