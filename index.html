@@ -13,81 +13,75 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
     <script src="scripts/config.js"> </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <div class="container-fluid teste">
-        <div class="row justify-content-center">
+                    <div class="row justify-content-center">
             <div class="col-xs-12 m-5">
-                <img src="assets/images/logo branco.png" alt="logo" class="w-100 align-items-center">
+                <img src="assets/images/logo branco.png" alt="logo" class="w-100">
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 m-3">
+
                 <form>
                     <input type="email" id="email" placeholder="Digite seu email" class="form-control form-login mb-4"
                         autofocus>
                     <input type="password" id="password" placeholder="Digite sua senha" class="form-control form-login"
                         required>
-                    <button type="button" class="btn btn-danger btn-block mt-3">Entrar</button>
+                    <button type="button" class="btn btn-danger btn-block my-3">Entrar</button>
                 </form>
-            </div>
-            <div class="col-md-6"></div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xs-12 mb-5">
-                <button id="login-gmail" class="facemail-btn">
-                    <img src="assets/images/gmail-logo.png" alt="gmail-logo" width="40px" height="30px"
-                        class="login-img"></button>
-                <button id="login-facebook" class="facemail-btn" onclick="loginFacebook()">
-                    <img src="assets/images/face-logo.png" alt="face-logo" width="40px" height="40px"
-                        class="login-img"></button>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xs-12 mb-5">
-                <button type="new-user" class="subscribe-btn" data-toggle="modal" data-target="#exampleModal">
+
+                <div class="logins d-flex justify-content-center">
+                    <button id="login-gmail" class="facemail-btn">
+                        <img src="assets/images/gmail-logo.png" alt="gmail-logo" width="40px" height="30px"
+                            class="login-img"></button>
+                    <button id="login-facebook" class="facemail-btn" onclick="loginFacebook()">
+                        <img src="assets/images/face-logo.png" alt="face-logo" width="40px" height="40px"
+                            class="login-img"></button>
+                </div>
+
+                <button type="new-user" class="subscribe-btn m-5" data-toggle="modal" data-target="#exampleModal">
                     Não tem cadastro? Clique aqui!
                 </button>
-            </div>
-        </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cadastro de novo usuário:</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row justify-content-center">
-                            <div class="col-xs-12">
-                                <form>
-                                    <input type="text" id="input-name" placeholder="Digite seu nome"
-                                        class="form-control mb-2" autofocus>
-                                    <input type="email" id="input-email" placeholder="Digite seu email"
-                                        class="form-control mb-2">
-                                    <input type="password" id="input-password"
-                                        placeholder="Senha (mínimo 6 caracteres)" class="form-control mb-2" required>
-                                    <button id="btn-register"
-                                        class="btn btn-dark btn-lg btn-block mb-2">Cadastrar</button>
-                                </form>
-                            </div>
+            </div>
+            <div class="col-md-6 d-none">div vazia</div>
+        </div>
+    </div>
+
+    <div class="modal fade modalteste" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastro de novo usuário:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-xs-12">
+                            <form>
+                                <input type="text" id="input-name" placeholder="Digite seu nome"
+                                    class="form-control mb-2" autofocus>
+                                <input type="email" id="input-email" placeholder="Digite seu email"
+                                    class="form-control mb-2">
+                                <input type="password" id="input-password" placeholder="Senha (mínimo 6 caracteres)"
+                                    class="form-control mb-2" required>
+                                <button id="btn-register" class="btn btn-dark btn-lg btn-block mb-2">Cadastrar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
         </script>
@@ -101,7 +95,7 @@
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/profile.js"></script>
     <script type="text/javascript" src="scripts/register.js"></script>
-    
+
 
 </body>
 

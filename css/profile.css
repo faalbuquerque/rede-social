@@ -1,3 +1,63 @@
 .post-style{
   list-style: none;
+ }
+
+.lateral-bar{
+  background-color:#b21c1c;
+  height: 100vh;
+}
+ 
+.nav-bar{
+    background-color: #b21c1c;
+    
+}   
+    
+.lateral-left{
+  background-image: url(/assets/images/aside-left.png);
+  background-size: cover;
+}
+
+.lateral-right{
+  background-image: url(/assets/images/aside-right.png);
+  background-size: cover;
+}
+
+.nav-elem{
+  background-color: #b21c1c;
+  color: white;
+  font-family: 'Baloo Chettan', cursive;
+  }
+
+.img-nav{
+  width: 40px;
+}
+
+.btn-exit{
+  background-color: #b21c1c;
+  border: none;
+}
+
+.user-photo{
+  border: 1px solid #b21c1c;
+  width: 80px;
+  height: 80px;
+  
+}
+
+.xuxu-toggler {
+  border-color: rgb(255,255,255)!important;
+}
+.xuxu-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+  @media (max-width: 800px) {
+
+.lateral-left{
+  display: none;
+}
+.lateral-right{
+  display: none;
+}
+
 }
