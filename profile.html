@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Fork Rank</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/profile.css">
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-  <script src="scripts/config.js"> </script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/profile.css">
+
 </head>
 
 <body>
-  <h1>Fork Rank</h1>
-  <section>
-    <form>
-      <input id="post-text" placeholder="Como está sua fome hoje?"></input>
-    </form>
-    <div>
-      <select name="posttype" id="privacy-menu">
-        <option>Amigos</option>
-        <option>Somente eu</option>
-      </select>
-      <button type="submit"  id="post-button">Publicar</button>
+
+  <div class="container-fliud">
+
+    <div class="row nav-bar">
+      <div class="col-12">
+
+        <nav class="navbar navbar-expand-lg navbar-light nav-elem">
+          <a class="navbar-brand text-white nav-elem" href="#">Fork Rank</a>
+          <button class="navbar-toggler xuxu-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon xuxu-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex">
+              <li class="nav-item active">
+                <a class="nav-link nav-elem text-white" href="#">Perfil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link nav-elem text-white" href="#">Restaurantes</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link nav-elem text-white" href="#">Recomendações</a>
+              </li>
+              <li>
+                <button id="exit" class="btn-exit nav-elem">Sair</i></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        
+      </div>
     </div>
-  </section>
-  <ul id="post-feed">
-  </ul>
 
-  <button id= "exit" class= "btn btn-light btn-block">Sair</button>
+    <div class="row">
+      <aside class="col-md-3 lateral-bar lateral-left"></aside>
+      
+      <div class="col-md-6 mt-5">
+        <div class><img src="assets/images/images.jpg" alt="" class="rounded-circle user-photo"></div>
+        <form>
+          <input id="post-text" placeholder="Como está sua fome hoje?"></input>
+        </form>
+        <div>
+          <select name="posttype" id="privacy-menu">
+            <option>Amigos</option>
+            <option>Somente eu</option>
+          </select>
+          <button type="submit" id="post-button">Publicar</button>
+        </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="scripts/profile.js"></script>
-  <script src="scripts/script.js"></script>
-  
+        <ul id="post-feed">
+        </ul>
+      </div>
+
+      <aside class="col-md-3 lateral-bar lateral-right"></aside>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
+  <script type="text/javascript" src="scripts/profile.js"></script>
+  <script type="text/javascript" src="scripts/register.js"></script>
+
 </body>
 
 </html>

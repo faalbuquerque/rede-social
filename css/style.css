@@ -5,7 +5,6 @@
 }
 
 .form-login{
-    background-color: rgba(255, 255, 255, 0.5);
     border: none;
 }
 
@@ -15,7 +14,7 @@
 
 .subscribe-btn{
     background-color: transparent;
-    color: white;
+    color: rgb(59, 59, 59);
     border: none;
     text-decoration: underline;
    }
@@ -25,4 +24,7 @@
     border: none;
 }
 
+.modalteste{
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
