@@ -6,7 +6,7 @@
 
 .form-login{
     border: none;
-    font-family: 'Baloo Chettan', cursive;
+    font-family: "Viga"
     
 }
 
@@ -14,14 +14,14 @@
     border: none;
 }
 .login-btn{
-    font-family: 'Baloo Chettan', cursive;
+    font-family: "Viga";
 }
 
 .subscribe-btn{
     color: rgb(59, 59, 59);
     border: none;
     text-decoration: underline;
-    font-family: 'Baloo Chettan', cursive;
+    font-family: "Viga";
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
    }
