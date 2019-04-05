@@ -1,4 +1,4 @@
-.teste{
+.login-section{
     height: 100vh;
     background-image: url(/assets/images/background-login.png);
     background-size: cover;
@@ -6,18 +6,28 @@
 
 .form-login{
     border: none;
+    font-family: 'Baloo Chettan', cursive;
+    
 }
 
 .login-img{
     border: none;
 }
+.login-btn{
+    font-family: 'Baloo Chettan', cursive;
+}
 
 .subscribe-btn{
-    background-color: transparent;
     color: rgb(59, 59, 59);
     border: none;
     text-decoration: underline;
+    font-family: 'Baloo Chettan', cursive;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
    }
+
+   ::-webkit-input-placeholder   { 
+       color:#4C4; }   
 
 .facemail-btn{
     background-color: transparent;
@@ -28,3 +38,29 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+@media (min-width: 500px){
+
+.img-logo{
+    width: 50% !important; 
+   height: 100%;
+}
+.subscribe-btn{
+    background-color: transparent;
+    color: rgb(59, 59, 59);
+    border: none;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.5);
+   }
+.back-red{
+    display: block;
+    background-color: red;
+ 
+}   
+.login-section{
+    height: 100vh;
+    background-image: url(/assets/images/bjorn-radestrom-646516-unsplash.jpg);
+    background-size: cover;
+}
+
+
+}

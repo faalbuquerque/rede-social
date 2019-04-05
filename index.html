@@ -12,30 +12,35 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
     <script src="scripts/config.js"> </script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <div class="container-fluid teste">
-                    <div class="row justify-content-center">
-            <div class="col-xs-12 m-5">
-                <img src="assets/images/logo branco.png" alt="logo" class="w-100">
+
+    <div class="container-fluid login-section">
+
+        <div class="back-red d-none">vazia</div>
+
+        <div class="row justify-content-center">
+            <div class="col-xs-12 mt-3 mb-3 mx-5 top-red d-flex justify-content-center">
+                <img src="assets/images/logo branco.png" alt="logo" class="img-logo w-100">
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-6 m-3">
+            <div class="col-xs-12 m-3">
 
                 <form>
                     <input type="email" id="email" placeholder="Digite seu email" class="form-control form-login mb-4"
                         autofocus>
                     <input type="password" id="password" placeholder="Digite sua senha" class="form-control form-login"
                         required>
-                    <button type="button" class="btn btn-danger btn-block my-3">Entrar</button>
+                    <button type="button" class="btn btn-danger btn-block login-btn my-3">Entrar</button>
                 </form>
 
-                <div class="logins d-flex justify-content-center">
+                <div class="logins d-flex justify-content-center mt-4">
                     <button id="login-gmail" class="facemail-btn">
                         <img src="assets/images/gmail-logo.png" alt="gmail-logo" width="40px" height="30px"
                             class="login-img"></button>
@@ -49,8 +54,9 @@
                 </button>
 
             </div>
-            <div class="col-md-6 d-none">div vazia</div>
+
         </div>
+
     </div>
 
     <div class="modal fade modalteste" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
