@@ -1,26 +1,22 @@
 .post-style{
   list-style: none;
  }
-
-.lateral-bar{
-  background-color:#b21c1c;
-  height: 100vh;
-}
  
 .nav-bar{
     background-color: #b21c1c;
-    
 }   
     
 .lateral-left{
   background-image: url(/assets/images/aside-left.png);
   background-size: cover;
+  
 }
 
 .lateral-right{
   background-image: url(/assets/images/aside-right.png);
   background-size: cover;
-}
+  
+ }
 
 .nav-elem{
   background-color: #b21c1c;
@@ -38,10 +34,8 @@
 }
 
 .user-photo{
-  border: 2px solid #b21c1c;
   width: 80px;
-  height: 80px;
-  
+  height: 80px;  
 }
 
 .xuxu-toggler {
@@ -49,6 +43,18 @@
 }
 .xuxu-icon {
 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+.text-style{
+  font-family: "Viga";
+  font-size: 15px;
+}
+.post-feed{
+  font-family: "Viga";
+  height: 100vh;
+}
+.text-input{
+
 }
 
   @media (max-width: 800px) {
@@ -59,6 +65,19 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 .lateral-right{
   display: none;
 }
-
+.text-style{
+   font-size: 15px;
 }
 
+}
+.btn-del{
+  background-color: transparent;
+  border: none;
+  color: #b21c1c
+}
+
+.btn-edit{
+  background-color: transparent;
+  border: none;
+  color: #b21c1c
+}

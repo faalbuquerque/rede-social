@@ -53,11 +53,15 @@ $(document).ready(function() {
 
   function createPost (text, key){
     $("#post-feed").prepend(
-      `<li class="post-style"> 
-      <p>${text}</p> 
-      <button data-del-id="${key}">Excluir</button>
-      <button data-edit-id="${key}">Editar</button>
-       </li> 
+      `<li class="post-style">
+      <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
+      <p>${text}</p>
+      <div class= "btns d-flex flex-column align-items-start"> 
+      <button class="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
+      <button class="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
+      <div>
+      <div> 
+      </li> 
        `);
 
        $(`button[data-del-id=${key}]`).click(function(){
