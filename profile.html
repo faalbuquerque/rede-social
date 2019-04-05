@@ -11,7 +11,8 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+  <script type="text/javascript" src="scripts/config.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/profile.css">
@@ -26,13 +27,15 @@
       <div class="col-12">
 
         <nav class="navbar navbar-expand-lg navbar-light nav-elem">
-          <a class="navbar-brand text-white nav-elem" href="#"> <img src="assets/images/logo fork branco.png" class="img-nav mr-2" alt="logo nav"> Fork Rank</a>
-          <button class="navbar-toggler xuxu-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand text-white nav-elem" href="#"> <img src="assets/images/logo fork branco.png"
+              class="img-nav mr-2" alt="logo nav">FORK RANK</a>
+          <button class="navbar-toggler xuxu-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon xuxu-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav d-flex">
+            <ul class="navbar-nav d-flex align-items-center ">
               <li class="nav-item active">
                 <a class="nav-link nav-elem text-white" href="#">Perfil<span class="sr-only">(current)</span></a>
               </li>
@@ -48,33 +51,46 @@
             </ul>
           </div>
         </nav>
-        
+
       </div>
     </div>
 
     <div class="row">
       <aside class="col-md-3 lateral-bar lateral-left"></aside>
-            <div class="col-md-6 mt-5">
 
-        <div class="flex-row">
-        <div class><img src="assets/images/images.jpg" alt="" class="rounded-circle user-photo"></div>
-        <form>
-          <input id="post-text" placeholder="Como está sua fome hoje?"></input>
-        </form>
-      </div>
-        <div>
-          <select name="posttype" id="privacy-menu">
-            <option>Amigos</option>
-            <option>Somente eu</option>
-          </select>
-          <button type="submit" id="post-button">Publicar</button>
+      <div class="col-md-6 mt-5">
+
+        <div class=" d-flex flex-row mb-5">
+
+          <img src="assets/images/images.jpg" alt="" class="rounded-circle user-photo mx-3">
+
+          <div class="">
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+              </div>
+              <input id="post-text" type="text" class="form-control rounded text-style text-input" placeholder="Como está sua fome hoje?"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="d-flex flex-row">
+              <select name="posttype" id="privacy-menu" class="custom-select text-style mx-2">
+                <option selected>Privacidade</option>
+                <option value="1">Amigos</option>
+                <option value="2">Somente eu</option>
+              </select>
+              <button type="submit" id="post-button" type="button" class="btn btn-secondary text-style mx-2">Publicar</button>
+            </div>
+          </div>
+
         </div>
-        <ul id="post-feed">
+
+        <ul id="post-feed" class="post-feed">
         </ul>
 
       </div>
 
-      <aside class="col-md-3 lateral-bar lateral-right"></aside>
+      <aside class="col-md-3 lateral-right"></aside>
     </div>
 
   </div>
