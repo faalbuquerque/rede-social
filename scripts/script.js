@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     $("#btn-login").click(function (event) {
@@ -7,8 +8,7 @@ $(document).ready(function () {
     
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function (response) {
-                window.location = 'profile.html';
-              
+                window.location = 'profile.html?id=' + response.user.uid;
             })
             .catch(function (error) {
                 let errorCode = error.code;
@@ -22,9 +22,12 @@ $(document).ready(function () {
         let provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
             .then(function (result) {
-                let token = result.credential.acessToken;
                 let user = result.user;
-                window.location = 'profile.html';
+                let token = result.credential.acessToken;
+                window.location = 'profile.html?id=' + result.user.uid;
+                database.ref("users/" + response.user.uid).push({
+                    name: name,
+                    }); 
             })
             .catch(function (error) {
                 let errorCode = error.code;
@@ -37,16 +40,21 @@ $(document).ready(function () {
 
     $("#login-facebook").click(function (event) {
         event.preventDefault();
-        var provider = new firebase.auth.FacebookAuthProvider();
-        firebase.auth().signInWithPopup(provider).then(resposta =>{
-            window.location = 'profile.html';
-            console.log('usuario',resposta.user);
-            console.log('token', resposta.credential.accessToken);
+        let provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+            .then(response =>{
+            window.location = 'profile.html?id=' + response.user.uid;
+            database.ref("users/" + response.user.uid).push({
+                name: name,
+                }); 
         }).catch(erro => {
-            console.log('erro' , erro);
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            let email = error.email;
+            let credential = error.credential;
+            alert('Erro de autenticação')
         })      
     })
-
 })
 
 

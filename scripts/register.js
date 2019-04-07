@@ -3,13 +3,17 @@ $(document).ready(function () {
 
     $("#btn-register").click(function (event) {
         event.preventDefault();
+
         let name = $("#input-name").val();
         let email = $("#input-email").val();
         let password = $("#input-password").val();
 
         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(function () {
-                window.location = 'profile.html';
+            .then(function (response) {
+                window.location = 'profile.html?id=' + response.user.uid;
+                database.ref("users/" + response.user.uid).push({
+                name: name,
+                }); 
             })
             .catch(function (error) {
                 let errorCode = error.code;
@@ -17,18 +21,13 @@ $(document).ready(function () {
                 alert("erro: " + errorMessage);
             });
 
-            firebase.database().ref('users/' + userId).set({
-                username: name,
-                email: email,
-            });
-        
-            let userId = firebase.auth().currentUser.uid;
-            return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-            let username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-            // ...
-            })
     });
 
+
+    $("#new-user").click(function (event) {
+        event.preventDefault();
+        window.location = 'register.html';
+    });   
 
 
     $("#exit").click(function (event) {
@@ -39,12 +38,6 @@ $(document).ready(function () {
         }).catch(function(error) {
             alert("Erro: " + error);
         });
-    });
-
-
-    $("#new-user").click(function (event) {
-        event.preventDefault();
-        window.location = 'register.html';
     });
 
     
