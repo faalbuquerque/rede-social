@@ -9,8 +9,8 @@
 .lateral-left{
   background-image: url(/assets/images/aside-left.png);
   background-size: cover;
-  
-}
+ 
+  }
 
 .lateral-right{
   background-image: url(/assets/images/aside-right.png);
@@ -22,7 +22,7 @@
   background-color: #b21c1c;
   color: white;
   font-family: "Viga";
-  }
+}
 
 .img-nav{
   width: 30px;
@@ -30,7 +30,8 @@
 
 .btn-exit{
   background-color: #b21c1c;
-  border: none;
+  border: 1px solid white;
+  color: white;
 }
 
 .user-photo{
@@ -54,6 +55,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   height: 100vh;
 }
 .text-input{
+  height: 100px;
 
 }
 
@@ -80,4 +82,16 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   background-color: transparent;
   border: none;
   color: #b21c1c
+}
+
+.btn-save{
+  background-color: #b21c1c;
+  border: none;
+  color: white;
+  border-color: #b21c1c;
+  font-size: 15px;
+}
+
+.post-area{
+  resize: none;
 }

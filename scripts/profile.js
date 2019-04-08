@@ -45,20 +45,21 @@ $(document).ready(function() {
 
   function createPost (text, key){
     $("#post-feed").prepend(
-      `<li class="post-style"> 
-        <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
+      `<li class="post-style" data-post-id="${key}"> 
+      <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
           <p>${text}</p> 
-         
-          <button id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
-          <button id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
-        
+          <div class= "btns d-flex flex-column align-items-start"> 
+          <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
+          <button class="btn-edit ml-auto" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
+        </div>
         </div>
       </li> 
    `);
   
     $(`button[data-del-id=${key}]`).click(function(event){
       event.preventDefault();
-      $(this).parent().remove();
+      $(`li[data-post-id=${key}]`).remove();
+     
       database.ref("posts/" + USER_ID + "/" + key).remove();
     });
   
@@ -69,13 +70,14 @@ $(document).ready(function() {
       $("#post-feed").html(
         `<li class="post-style">  
           <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
-            <p>${text}</p>
-            
-              <button id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
-              <button id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
-
-              <button id="btn-edit"> Salvar</button>
-            
+            <textarea class="border-0 post-area" >${text}</textarea>
+            <div class= "btns d-flex flex-column align-items-start">
+                <div class="d-flex flex-row justify-content-end">
+              <button class="btn-del" id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
+              <button class="btn-edit" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
+                  </div>
+              <button class="btn-save border border-danger rounded" id="btn-edit"> Salvar</button>
+              </div>
             </div> 
            </li> 
         `)
