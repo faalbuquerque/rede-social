@@ -10,7 +10,7 @@ $(document).ready(function () {
         let childKey = childSnapshot.key;
         let childData = childSnapshot.val();
 
-        createPost(childData.text, childKey)
+        createPost(childData.text, childKey, childData.like)
       });
     });
 
@@ -22,10 +22,12 @@ $(document).ready(function () {
     $("#post-text").val("");
 
     let newPostInDB = database.ref('posts/' + USER_ID).push({
-      text: postText
+      text: postText,
+      like: 0
     });
 
-    createPost(postText, newPostInDB.key);
+    let likePost= 0
+    createPost(postText, newPostInDB.key, likePost);
     $("#post-button").prop("disabled", true);
 
   });
@@ -43,15 +45,18 @@ $(document).ready(function () {
     }
   });
 
-  function createPost(text, key) {
+  function createPost(text, key, likePost) {
     $("#post-feed").prepend(
       `<li class="post-style" data-post-id="${key}"> 
       <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
           <p data-id-post="${key}" class="post-text">${text}</p> 
-          <div class= "btns d-flex flex-column align-items-start"> 
+          
           <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
           <button class="btn-edit ml-auto" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
           <button class="btn-save border border-danger rounded d-none" data-save-id="${key}">Salvar</button>
+          <div class= "btns d-flex flex-column align-items-start"> 
+          <button class="fas fa-heart" type="button" data-like-id="${key}">
+          <span class="badge" data-span-id="${key}">${likePost}</span></button>
           </div>
         </div>
       </li> 
@@ -84,8 +89,27 @@ $(document).ready(function () {
       });
     });
 
+
+  
+
+$(`button[data-like-id=${key}]`).click(function () {
+  let contador = 0;
+  contador += 1;
+  let numero = parseInt($(`span[data-span-id="${key}"]`).text()) + 1;
+  $(`span[data-span-id="${key}"]`).text(numero);
+  database.ref("posts/" + USER_ID + "/" + key).update({
+    like: numero
+  })
+});
+
+
+
+
+
+
   }
 
+  
 
   $("#exit").click(function (event) {
     event.preventDefault();
@@ -95,6 +119,8 @@ $(document).ready(function () {
       alert("Erro: " + error);
     });
   });
+
+
 
 });
 
