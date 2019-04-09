@@ -49,9 +49,10 @@ $(document).ready(function () {
     $("#post-feed").prepend(
       `<li class="post-style" data-post-id="${key}"> 
       <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded"> 
-          <p data-id-post="${key}" class="post-text">${text}</p> 
-          
-          <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
+      <p data-id-post="${key}" class="post-text">${text}</p> 
+      <div class= "btns d-flex flex-column align-items-start"> 
+      
+      <button class="btn-del ml-auto" id="btn-del" data-toggle="modal" data-target="#delete" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
           <button class="btn-edit ml-auto" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
           <button class="btn-save border border-danger rounded d-none" data-save-id="${key}">Salvar</button>
           <div class= "btns d-flex flex-column align-items-start"> 
@@ -64,9 +65,11 @@ $(document).ready(function () {
 
     $(`button[data-del-id=${key}]`).click(function (event) {
       event.preventDefault();
-      $(`li[data-post-id=${key}]`).remove();
 
-      database.ref("posts/" + USER_ID + "/" + key).remove();
+      $("#delete").click(function (){
+        $(`li[data-post-id=${key}]`).remove();
+        database.ref("posts/" + USER_ID + "/" + key).remove();
+      }) 
     });
 
 
@@ -92,7 +95,7 @@ $(document).ready(function () {
 
   
 
-$(`button[data-like-id=${key}]`).click(function () {
+ $(`button[data-like-id=${key}]`).click(function () {
   let contador = 0;
   contador += 1;
   let numero = parseInt($(`span[data-span-id="${key}"]`).text()) + 1;
@@ -100,14 +103,9 @@ $(`button[data-like-id=${key}]`).click(function () {
   database.ref("posts/" + USER_ID + "/" + key).update({
     like: numero
   })
-});
+ });
 
-
-
-
-
-
-  }
+}
 
   
 
