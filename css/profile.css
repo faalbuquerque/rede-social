@@ -95,3 +95,10 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 .post-area{
   resize: none;
 }
+
+.fa-heart{
+  color: red;
+  border: transparent;
+  background: transparent;
+  font-size: 25px;
+  }
