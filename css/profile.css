@@ -93,6 +93,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   resize: none;
 }
 
+
 .privacy-type{
   font-size: 10px;
   color: #b21c1c;
@@ -111,3 +112,11 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   background-color: #b21c1c;
   font-style: "Viga"
 }
+
+.fa-heart{
+  color: red;
+  border: transparent;
+  background: transparent;
+  font-size: 25px;
+  }
+

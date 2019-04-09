@@ -12,7 +12,9 @@ $(document).ready(function () {
         let privacy = childData.privacyType;
         let time = childData.time
 
-        createPost(childData.text, childKey, privacy, time)
+
+        createPost(childData.text, childKey, privacy, time, childData.like)
+
       });
     });
 
@@ -28,10 +30,15 @@ $(document).ready(function () {
     let newPostInDB = database.ref('posts/' + USER_ID).push({
       text: postText,
       privacyType: privacy,
-      time: hour
+      time: hour,
+      like: 0
     });
 
-    createPost(postText, newPostInDB.key, privacy, hour);
+    createPost(postText, newPostInDB.key, privacy, hour, likePost);
+    });
+
+    let likePost= 0
+    
     $("#post-button").prop("disabled", true);
   });
 
@@ -46,7 +53,8 @@ $(document).ready(function () {
     }
   });
 
-  function createPost(text, key, privacyType, hour) {
+
+  function createPost(text, key, privacyType, hour, likePost) {
     $("#post-feed").prepend(
       `<li class="post-style" data-post-id="${key}"> 
       <div class="d-flex flex-row justify-content-between mr-5 my-3 p-3 border border-secondary rounded">
@@ -58,6 +66,9 @@ $(document).ready(function () {
           <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}"><i class="fas fa-trash-alt"></i></button>
           <button class="btn-edit ml-auto" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
           <button class="btn-save border border-danger rounded d-none" data-save-id="${key}">Salvar</button>
+          <div class= "btns d-flex flex-column align-items-start"> 
+          <button class="fas fa-heart" type="button" data-like-id="${key}">
+          <span class="badge" data-span-id="${key}">${likePost}</span></button>
           </div>
         </div>
       </li> 
@@ -65,9 +76,11 @@ $(document).ready(function () {
 
     $(`button[data-del-id=${key}]`).click(function (event) {
       event.preventDefault();
-      $(`li[data-post-id=${key}]`).remove();
 
-      database.ref("posts/" + USER_ID + "/" + key).remove();
+      $("#delete").click(function (){
+        $(`li[data-post-id=${key}]`).remove();
+        database.ref("posts/" + USER_ID + "/" + key).remove();
+      }) 
     });
 
     $(`button[data-edit-id=${key}]`).click(function (event) {
@@ -89,7 +102,21 @@ $(document).ready(function () {
       });
     });
 
-  }
+
+
+  
+
+ $(`button[data-like-id=${key}]`).click(function () {
+  let contador = 0;
+  contador += 1;
+  let numero = parseInt($(`span[data-span-id="${key}"]`).text()) + 1;
+  $(`span[data-span-id="${key}"]`).text(numero);
+  database.ref("posts/" + USER_ID + "/" + key).update({
+    like: numero
+  })
+ });
+
+}
 
   $("#exit").click(function (event) {
     event.preventDefault();
@@ -100,10 +127,12 @@ $(document).ready(function () {
     });
   });
 
+
 $("button").click(function (click){
       event.preventDefault();
       let id = button.id;
   console.log(id)
+
 
 });
 
