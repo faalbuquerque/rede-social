@@ -6,7 +6,7 @@ Quando observamos as redes sociais mais populares, alguns dos tipos de posts mai
 
 # Fork Rank
 
-Pensando nessa demanda criamos uma rede social chamada Fork Rank, ela possui elementos básicos de uma rede social: As pessoas podem se cadastrar e criar um perfil pessoal, nesse perfil é possível postar opiniões sobre restaurantes e comidas, os comentários podem ser públicos ou privados e também será implementada no futuro a funcionalidade de seguir pessoas para visualizar e curtir suas publicações.  
+Pensando nessa demanda criamos uma rede social chamada Fork Rank, ela possui elementos básicos de uma rede social: As pessoas podem se cadastrar e criar um perfil pessoal, nesse perfil é possível postar opiniões sobre restaurantes e comidas, os comentários podem ser públicos ou privados sendo possivel curtir os posts, também será implementada no futuro a funcionalidade de seguir pessoas para visualizar suas publicações.  
 
 A nossa rede social é voltada para usuários que são ativos na rede sociais, apreciam culinária, gostam de expressar suas opiniões e conhecer pessoas.   
 
