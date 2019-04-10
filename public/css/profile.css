@@ -7,15 +7,17 @@
 }   
     
 .lateral-left{
-  background-image: url(/assets/images/aside-left.png);
+  background-image: url(../assets/images/aside-left.png);
   background-size: cover;
+  background-repeat: repeat-y;
  
-  }
+ }
 
 .lateral-right{
-  background-image: url(/assets/images/aside-right.png);
+  background-image: url(../assets/images/aside-right.png);
   background-size: cover;
-  
+  background-repeat: round;
+
  }
 
 .nav-elem{
@@ -28,21 +30,15 @@
   width: 30px;
 }
 
-.btn-exit{
-  background-color: #b21c1c;
-  border: 1px solid white;
-  color: white;
-}
-
 .user-photo{
   width: 80px;
   height: 80px;  
 }
 
-.xuxu-toggler {
+.iconedit-toggler {
   border-color: rgb(255,255,255)!important;
 }
-.xuxu-icon {
+.iconedit-icon {
 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
 }
 
@@ -53,11 +49,12 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 .post-feed{
   font-family: "Viga";
   height: 100vh;
+  
 }
 .text-input{
-  height: 100px;
-
-}
+  height: 20vh;
+  resize: none;
+   }
 
   @media (max-width: 800px) {
 
@@ -66,9 +63,6 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 }
 .lateral-right{
   display: none;
-}
-.text-style{
-   font-size: 15px;
 }
 
 }
@@ -96,9 +90,29 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   resize: none;
 }
 
-.fa-heart{
-  color: red;
+
+.privacy-type{
+  font-size: 10px;
+  color: #b21c1c;
+}
+
+.scroll-edit  {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-edit ::-webkit-scrollbar { 
+  display: none;
+}
+
+.filter-button{
+  background-color: #b21c1c;
+  font-style: "Viga"
+}
+
+.like-icon{
+  color: #b21c1c;
   border: transparent;
   background: transparent;
-  font-size: 25px;
+  font-size: 10x;
   }

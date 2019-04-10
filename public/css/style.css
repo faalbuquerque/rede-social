@@ -1,6 +1,6 @@
 .login-section{
     height: 100vh;
-    background-image: url(/assets/images/background-login.png);
+    background-image: url(../assets/images/background-login.png);
     background-size: cover;
 }
 
@@ -26,9 +26,7 @@
     border-radius: 5px;
    }
 
-   ::-webkit-input-placeholder   { 
-       color:#4C4; }   
-
+  
 .facemail-btn{
     background-color: transparent;
     border: none;
@@ -51,16 +49,11 @@
     text-decoration: underline;
     background-color: rgba(255, 255, 255, 0.5);
    }
-.back-red{
-    display: block;
-    background-color: red;
- 
-}   
+
 .login-section{
     height: 100vh;
-    background-image: url(/assets/images/bjorn-radestrom-646516-unsplash.jpg);
+    background-image: url(../assets/images/bjorn-radestrom-646516-unsplash.jpg);
     background-size: cover;
 }
-
 
 }
