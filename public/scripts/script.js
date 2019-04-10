@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     $("#btn-login").click(function (event) {
@@ -56,5 +55,3 @@ $(document).ready(function () {
         })      
     })
 })
-
-
