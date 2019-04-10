@@ -14,7 +14,13 @@ $(document).ready(function () {
                 let errorMessage = error.message;
                 alert(errorMessage);
             });
-    })
+    });
+
+    $(document).keypress(function(e) {
+        if (e.which == 13) {
+             $("#btn-login").trigger('click'); 
+        }
+    });
 
     $("#login-gmail").click(function (event) {
         event.preventDefault();
