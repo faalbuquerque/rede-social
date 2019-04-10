@@ -5,5 +5,7 @@ let config = {
   projectId: "fork-rank",
   storageBucket: "fork-rank.appspot.com",
   messagingSenderId: "45382819866"
-};
+  
+  };
+
 firebase.initializeApp(config);
