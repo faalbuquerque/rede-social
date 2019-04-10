@@ -1,18 +1,18 @@
 .login-section{
     height: 100vh;
-    background-image: url(/assets/images/background-login.png);
+    background-image: url(../assets/images/background-login.png);
     background-size: cover;
 }
 
 .form-login{
     border: none;
-    font-family: "Viga"
-    
+    font-family: "Viga" 
 }
 
 .login-img{
     border: none;
 }
+
 .login-btn{
     font-family: "Viga";
 }
@@ -26,7 +26,6 @@
     border-radius: 5px;
    }
 
-  
 .facemail-btn{
     background-color: transparent;
     border: none;
@@ -40,7 +39,7 @@
 
 .img-logo{
     width: 50% !important; 
-   height: 100%;
+    height: 100%;
 }
 .subscribe-btn{
     background-color: transparent;
@@ -52,9 +51,8 @@
 
 .login-section{
     height: 100vh;
-    background-image: url(/assets/images/bjorn-radestrom-646516-unsplash.jpg);
+    background-image: url(../assets/images/bjorn-radestrom-646516-unsplash.jpg);
     background-size: cover;
 }
 
 }
-
