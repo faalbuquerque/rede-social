@@ -24,7 +24,8 @@ As principais funcionalidades do produto são: cadastro de usuário, login, perf
 
 Através do protótipo de media fidelidade no Marvel efetuamos testes de usabilidade. [Para acessar o protótipo clique aqui!](https://marvelapp.com/6g1f8b7/screen/54741167) 
 
-![](assets/images/marvel.png) 
+
+![Imagem do protótipo](assets/images/marvel.png) 
 
 
 
