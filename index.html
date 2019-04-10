@@ -7,31 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>Fork Rank</title>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-
-
     <script src="scripts/config.js"> </script>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
-
-    <div class="container-fluid login-section">
-       
-        <div class="row justify-content-center">
+    <main class="container-fluid login-section">
+        <section class="row justify-content-center">
             <div class="col-xs-12 mt-3 mb-3 mx-5 top-red d-flex justify-content-center">
                 <img src="assets/images/logo branco.png" alt="logo" class="img-logo w-100">
             </div>
-        </div>
-        <div class="row justify-content-center">
+        </section>
+        <section class="row justify-content-center">
             <div class="col-xs-12 m-3">
-
                 <form>
                     <input type="email" id="email" placeholder="Digite seu email" class="form-control form-login mb-4"
                         autofocus>
@@ -39,7 +32,6 @@
                         required>
                     <button id="btn-login" type="button" class="btn btn-danger btn-block login-btn my-3">Entrar</button>
                 </form>
-
                 <div class="logins d-flex justify-content-center mt-4">
                     <button id="login-gmail" class="facemail-btn">
                         <img src="assets/images/gmail-logo.png" alt="gmail-logo" width="40px" height="30px"
@@ -48,16 +40,12 @@
                         <img src="assets/images/face-logo.png" alt="face-logo" width="40px" height="40px"
                             class="login-img"></button>
                 </div>
-
                 <button type="new-user" class="subscribe-btn m-5" data-toggle="modal" data-target="#exampleModal">
                     Não tem cadastro? Clique aqui!
                 </button>
             </div>
-
-        </div>
-
-    </div>
-
+        </section>
+    </main>
     <div class="modal fade modalteste" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">

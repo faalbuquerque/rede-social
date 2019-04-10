@@ -16,128 +16,106 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/profile.css">
-
 </head>
 
 <body>
-
-  <div class="container-fliud">
-
-    <div class="row nav-bar">
-      <div class="col-12">
-
-        <nav class="navbar navbar-expand-lg navbar-light nav-elem">
-          <a class="navbar-brand text-white nav-elem" href="#"> <img src="assets/images/logo fork branco.png"
-              class="img-nav mr-2" alt="logo nav">FORK RANK</a>
-          <button class="navbar-toggler iconedit-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon iconedit-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav d-flex align-items-center flex-fill">
-              <li class="nav-item active">
-                <a class="nav-link nav-elem text-white" href="#">Perfil<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link nav-elem text-white" href="#">Restaurantes</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link nav-elem text-white" href="#">Recomendações</a>
-              </li>
-              <li class="btn-exit ml-auto">
-                <button id="exit" class="btn-exit nav-elem border rounded p-2">
-                  <img src="assets/images/1333_door-512.png" alt="logout-btn" width="20px" height="20px">
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-      </div>
-    </div>
-
-    <div class="row">
+  <nav class="row nav-bar">
+    <section class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light nav-elem">
+        <a class="navbar-brand text-white nav-elem" href="#"> <img src="assets/images/logo fork branco.png"
+            class="img-nav mr-2" alt="logo nav">FORK RANK</a>
+        <button class="navbar-toggler iconedit-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon iconedit-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav d-flex align-items-center flex-fill">
+            <li class="nav-item active">
+              <a class="nav-link nav-elem text-white" href="#">Perfil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link nav-elem text-white" href="#">Restaurantes</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link nav-elem text-white" href="#">Recomendações</a>
+            </li>
+            <li class="btn-exit ml-auto">
+              <button id="exit" class="btn-exit nav-elem border rounded p-2">
+                <img src="assets/images/1333_door-512.png" alt="logout-btn" width="20px" height="20px">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+  </nav>
+  <main class="container-fliud">
+    <section class="row">
       <aside class="col-md-3 lateral-bar lateral-left"></aside>
-
-
-      <div class="col-md-6 mt-5 main-screen sonomao">
+      <div class="col-md-6 mt-5 main-screen scroll-edit">
         <div class=" d-flex flex-row justify-content-around mx-4 mb-5">
-
           <img src="assets/images/images.jpg" alt="" class="rounded-circle user-photo mx-3">
-
           <div class="col-md-9 d-flex flex-fill flex-wrap">
-
             <div class="input-group mb-3">
               <textarea id="post-text" autofocus="true" type="text" class="form-control rounded text-style text-input"
                 placeholder="Como está sua fome hoje?" aria-label="Username" aria-describedby="basic-addon1"></textarea>
-
             </div>
-
             <div class="d-flex flex-row">
               <select name="posttype" id="privacy-menu" class="custom-select text-style mx-2">
-                <option value="1">Público</option>
-                <option value="2">Privado</option>
+                <option class="text-style" value="1">Público</option>
+                <option class="text-style" value="2">Privado</option>
               </select>
-              <button type="submit" id="post-button" type="button"
-                class="btn btn-secondary text-style mx-2">Publicar</button>
+              <button type="submit" id="post-button" class="btn btn-secondary text-style mx-2">Publicar</button>
             </div>
           </div>
         </div>
-
         <div class="col-md-6 ml-4">
-
           <p>
-            <button class="btn btn-secondary filter-button border-0" type="button" data-toggle="collapse"
+            <button class="btn btn-secondary filter-button border-0 text-style" type="button" data-toggle="collapse"
               data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Filtrar
             </button>
           </p>
           <div class="collapse" id="collapseExample">
-            <div class="card card-body flex-column p-2 mb-3">
+            <div class="card card-body flex-column p-2 mb-3 border-0 ">
               <div>
                 <p class="text-style">Mostrar postagens:</p>
               </div>
-              <div class="d-flex flex-row">
+              <div class="d-flex flex-row text-style">
                 <button id="private" type="button"
                   class="btn btn-secondary m-2 border-0 filter-button">Privadas</button>
                 <button id="public" type="button" class="btn btn-secondary m-2 border-0 filter-button">Públicas</button>
-                <button id="public" type="button" class="btn btn-secondary m-2 border-0 filter-button">Todas</button>
+                <button id="allposts" type="button" class="btn btn-secondary m-2 border-0 filter-button">Todas</button>
               </div>
             </div>
           </div>
-
         </div>
-
         <ul id="post-feed" class="post-feed">
         </ul>
       </div>
-
       <aside class="col-md-3 lateral-right"></aside>
-
-    </div>
-
-    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Apagar Post</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Tem certeza que deseja apagar?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" id="delete" data-dismiss="modal" class="btn btn-primary">Apagar</button>
-          </div>
+    </section>
+  </main>
+  <div class="modal fade display-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-style">Apagar Post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-style">
+          Tem certeza que deseja apagar?
+        </div>
+        <div class="modal-footer text-style">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" data-dismiss="modal" class="btn btn-primary" id= "delete-btn">Apagar</button>
         </div>
       </div>
     </div>
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -157,5 +135,3 @@
 
 
 </html>
-
-

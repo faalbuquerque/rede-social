@@ -66,7 +66,7 @@ $(document).ready(function () {
         </div>
   
         <div class="btns d-flex flex-column align-items-start">
-          <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}" data-toggle="modal" data-target="#delete"><i
+          <button class="btn-del ml-auto" id="btn-del" data-del-id="${key}" data-toggle="modal" data-target=".display-modal"><i
               class="fas fa-trash-alt"></i></button>
           <button class="btn-edit ml-auto" id="btn-edit" data-edit-id="${key}"><i class="fas fa-edit"></i></button>
           <button class="btn-save border border-danger rounded d-none" data-save-id="${key}">Salvar</button>
@@ -85,7 +85,7 @@ $(document).ready(function () {
     $(`button[data-del-id=${key}]`).click(function (event) {
       event.preventDefault();
 
-      $("#delete").click(function () {
+      $("#delete-btn").click(function () {
         $(`li[data-post-id=${key}]`).remove();
         database.ref("posts/" + USER_ID + "/" + key).remove();
       })
@@ -110,10 +110,6 @@ $(document).ready(function () {
       });
     });
 
-
-
-
-
     $(`button[data-like-id=${key}]`).click(function () {
       let contador = 0;
       contador += 1;
@@ -135,6 +131,66 @@ $(document).ready(function () {
     });
   });
 
+  $("#private").click(function (event) {
+    event.preventDefault();
+
+
+      database.ref("posts/" + USER_ID).once("value", function (snapshot) {
+        $("#post-feed").html("");
+        snapshot.forEach(function (childSnapshot) {
+          let childKey = childSnapshot.key;
+          let childData = childSnapshot.val();
+          let privacy = childData.privacyType;
+          let time = childData.time
+          
+          
+          if(privacy === "Privado"){
+            createPost(childData.text, childKey, privacy, time, childData.like)
+          }
+    }); 
+
+      });
+
+  });
+
+  $("#public").click(function (event) {
+    event.preventDefault();
+
+      database.ref("posts/" + USER_ID).once("value", function (snapshot) {
+        $("#post-feed").html("");
+        snapshot.forEach(function (childSnapshot) {
+          let childKey = childSnapshot.key;
+          let childData = childSnapshot.val();
+          let privacy = childData.privacyType;
+          let time = childData.time
+         
+          
+          if(privacy === "Público"){
+            createPost(childData.text, childKey, privacy, time, childData.like)
+          }
+    }); 
+
+      });
+
+  });
+
+  $("#allposts").click(function (event) {
+    event.preventDefault();
+
+    database.ref("posts/" + USER_ID).once("value", function (snapshot) {
+      $("#post-feed").html("");
+      snapshot.forEach(function (childSnapshot) {
+        let childKey = childSnapshot.key;
+        let childData = childSnapshot.val();
+        let privacy = childData.privacyType;
+        let time = childData.time
+       
+        createPost(childData.text, childKey, privacy, time, childData.like)
+          }); 
+
+    });
+   
+  });
 
 });
 
