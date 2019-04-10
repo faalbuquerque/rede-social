@@ -64,9 +64,6 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 .lateral-right{
   display: none;
 }
-.text-style{
-   font-size: 15px;
-}
 
 }
 .btn-del{
@@ -113,10 +110,10 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   font-style: "Viga"
 }
 
-.fa-heart{
-  color: red;
+.like-icon{
+  color: #b21c1c;
   border: transparent;
   background: transparent;
-  font-size: 25px;
+  font-size: 10x;
   }
 
