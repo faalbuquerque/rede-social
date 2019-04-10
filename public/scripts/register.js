@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     $("#btn-register").click(function (event) {
@@ -39,9 +38,5 @@ $(document).ready(function () {
             alert("Erro: " + error);
         });
     });
-
-    
+  
 });
-
-
-

@@ -200,10 +200,6 @@ function getTime() {
   let showDate = tweetDate.getDate() + '/' + (tweetDate.getMonth()+1) + '/' + tweetDate.getFullYear() + ' - ' + tweetDate.getHours() + ':' + tweetDate.getMinutes();
   
   return showDate;
-
 }
   
-  
-
-
 

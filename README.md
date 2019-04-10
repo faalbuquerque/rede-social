@@ -12,7 +12,7 @@ A nossa rede social é voltada para usuários que são ativos na rede sociais, a
 
 ## Criamos 2 personas:
 
-![](assets/images/personas.png)
+![](public/assets/images/personas.png)
 
 Descobrimos as necessidades dos usuários, buscando informações sobre quantidade e tipo de acesso nas redes sociais que são mais populares e quais sao as publicaoes preferidas para o nosso perfil de usuario.  
 
@@ -24,18 +24,9 @@ As principais funcionalidades do produto são: cadastro de usuário, login, perf
 
 Através do protótipo de media fidelidade no Marvel efetuamos testes de usabilidade. [Para acessar o protótipo clique aqui!](https://marvelapp.com/6g1f8b7/screen/54741167) 
 
-
-![Imagem do protótipo](assets/images/marvel.png) 
-
+![Imagem do protótipo](public/assets/images/marvel.png) 
 
 ### Organizacão
 
 Nos organizamos através do [Trello](https://trello.com/b/bJYzc6QJ/rede-social) focando primeiro em deixar as funcionalidades OK e em seguida criamos o Layout pensando em mobile first.
-
-
-
-
-
-
-
 
