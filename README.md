@@ -22,10 +22,13 @@ O objetivo dos usuários em nossa rede social é aumentar sua rede de amigos com
 
 As principais funcionalidades do produto são: cadastro de usuário, login, perfil pessoal, opção de postar publicamente ou de modo privado, curtir posts e seguir pessoas.  
 
-Através do protótipo de media fidelidade no Marvel conseguimos efetuamos testes de usabilidade.     
-![](assets/images/marvel.png) 
+Através do protótipo de media fidelidade no Marvel conseguimos efetuamos testes de usabilidade. 
 
 [Para acessar o protótipo clique aqui!](https://marvelapp.com/6g1f8b7/screen/54741167) 
+
+![](assets/images/marvel.png) 
+
+
 
 
 
