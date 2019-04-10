@@ -61,12 +61,12 @@
               <textarea id="post-text" autofocus="true" type="text" class="form-control rounded text-style text-input"
                 placeholder="Como está sua fome hoje?" aria-label="Username" aria-describedby="basic-addon1"></textarea>
             </div>
-            <div class="d-flex flex-row">
-              <select name="posttype" id="privacy-menu" class="custom-select text-style mx-2">
+            <div class="select-div d-flex flex-row ml-auto">
+              <select name="posttype" id="privacy-menu" class="custom-select text-style mb-2">
                 <option class="text-style" value="1">Público</option>
                 <option class="text-style" value="2">Privado</option>
               </select>
-              <button type="submit" id="post-button" class="btn btn-secondary text-style mx-2">Publicar</button>
+              <button type="submit" id="post-button" class="btn btn-secondary text-style mx-2 btn-post">Publicar</button>
             </div>
           </div>
         </div>
@@ -78,13 +78,13 @@
             </button>
           </p>
           <div class="collapse" id="collapseExample">
-            <div class="card card-body flex-column p-2 mb-3 border-0 ">
+            <div class="card card-body flex-column p-2 mb-3 border-0">
               <div>
                 <p class="text-style">Mostrar postagens:</p>
               </div>
               <div class="d-flex flex-row text-style">
                 <button id="private" type="button"
-                  class="btn btn-secondary m-2 border-0 filter-button">Privadas</button>
+                  class="btn btn-secondary m-2 filter-button">Privadas</button>
                 <button id="public" type="button" class="btn btn-secondary m-2 border-0 filter-button">Públicas</button>
                 <button id="allposts" type="button" class="btn btn-secondary m-2 border-0 filter-button">Todas</button>
               </div>
@@ -111,8 +111,8 @@
           Tem certeza que deseja apagar?
         </div>
         <div class="modal-footer text-style">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" data-dismiss="modal" class="btn btn-primary" id= "delete-btn">Apagar</button>
+          <button type="button" class="btn btn-secondary text-style" data-dismiss="modal">Cancelar</button>
+          <button type="button" data-dismiss="modal" class="btn btn-danger btn-delete text-style border-0" id= "delete-btn">Apagar</button>
         </div>
       </div>
     </div>

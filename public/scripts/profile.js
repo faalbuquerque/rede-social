@@ -62,7 +62,8 @@ $(document).ready(function () {
   
         <div class="d-flex flex-column align-item-end">
           <p data-id-post="${key}" class="post-text">${text}</p>
-          <span class="privacy-type">${privacyType}-${hour}</span>
+          <span class="privacy-type">${privacyType}</span>
+          <span class="privacy-type">${hour}</span>
         </div>
   
         <div class="btns d-flex flex-column align-items-start">
@@ -196,11 +197,13 @@ $(document).ready(function () {
 
 function getTime() {
   let tweetDate = new Date();
-  let tweethour = tweetDate.getHours().toString();
-  let tweetMin = tweetDate.getMinutes().toString();
-  if (tweetMin.length < 2) {
-    tweetMin = "0" + tweetMin;
-  }
-  let printHour = tweethour + ":" + tweetMin;
-  return printHour;
+  let showDate = tweetDate.getDate() + '/' + (tweetDate.getMonth()+1) + '/' + tweetDate.getFullYear() + ' - ' + tweetDate.getHours() + ':' + tweetDate.getMinutes();
+  
+  return showDate;
+
 }
+  
+  
+
+
+

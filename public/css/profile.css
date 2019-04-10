@@ -7,14 +7,14 @@
 }   
     
 .lateral-left{
-  background-image: url(/assets/images/aside-left.png);
+  background-image: url(../assets/images/aside-left.png);
   background-size: cover;
   background-repeat: repeat-y;
  
  }
 
 .lateral-right{
-  background-image: url(/assets/images/aside-right.png);
+  background-image: url(../assets/images/aside-right.png);
   background-size: cover;
   background-repeat: round;
 
@@ -65,7 +65,12 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   display: none;
 }
 
+.select-div{
+  flex-direction: column!important;
 }
+
+}
+
 .btn-del{
   background-color: transparent;
   border: none;
@@ -89,7 +94,6 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
 .post-area{
   resize: none;
 }
-
 
 .privacy-type{
   font-size: 10px;
@@ -117,3 +121,12 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32
   font-size: 10x;
   }
 
+.btn-delete{
+  background-color: #b21c1c
+
+}
+
+.btn-post:hover {
+  background-color: #b21c1c;
+  border: 0;
+}
