@@ -1,4 +1,3 @@
-
 # Projeto Rede Social 
 
 No Brasil as redes sociais estao em constante crescimento, segundo levantamento da Hootsuite e We Are Social, o  Brasil é um dos campeões mundiais em tempo de permanência na rede, o internauta brasileiro fica, em média, nove horas e 14 minutos por dia conectado. Tambem segundo relatório da comScore, nosso tempo de permanência no ambiente online é de 9,7 horas por mês e a maior parte do tempo online dos brasileiros (36%) é gasto em mídias sociais. Por conta desse grande acesso as redes sociais 92% das empresas investem em suas redes sociais para atingir um numero ilimitado de pessoas e atrair talentos, segundo relatório da Social Media Trends.  
