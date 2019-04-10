@@ -28,6 +28,11 @@ Através do protótipo de media fidelidade no Marvel efetuamos testes de usabili
 ![Imagem do protótipo](assets/images/marvel.png) 
 
 
+## OrganizacÃo
+
+Nos organizamos através do [Trello] (https://trello.com/b/bJYzc6QJ/rede-social) focando primeiro em deixar as funcionalidades OK e em seguida criamos o Layout pensando em mobile firts.
+
+
 
 
 
