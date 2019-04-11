@@ -1,8 +1,14 @@
 .login-section{
-    height: 100vh;
     background-image: url(../assets/images/background-login.png);
     background-size: cover;
+    height: 100%;
 }
+
+.img-logo{
+    width: 100%; 
+    height: 100%;   
+}  
+
 
 .form-login{
     border: none;
@@ -38,7 +44,7 @@
 @media (min-width: 500px){
 
 .img-logo{
-    width: 50% !important; 
+    width: 50%; 
     height: 100%;
 }
 .subscribe-btn{
@@ -50,7 +56,6 @@
    }
 
 .login-section{
-    height: 100vh;
     background-image: url(../assets/images/bjorn-radestrom-646516-unsplash.jpg);
     background-size: cover;
 }
